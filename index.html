@@ -598,13 +598,13 @@
 
 				<div class="message">
 					<div class="col-md-6 col-sm-6 grid_6 c1">
-						<input type="text" class="margin-right" Name="Name" placeholder="Name" required="">
-						<input type="email" Name="Email" placeholder="Email" required="">
-						<input type="text" class="margin-right" Name="Phone Number" placeholder="Phone Number" required="">
+						<input type="text" class="margin-right" Name="Name" placeholder="Name" required="" id="submit-form-Name">
+						<input type="email" Name="Email" placeholder="Email" required="" id="submit-form-Email">
+						<input type="text" class="margin-right" Name="Phone Number" placeholder="Phone Number" required="" id="submit-form-PhoneNumber">
 					</div>
 
 					<div class="col-md-6 col-sm-6 grid_6 c1">
-						<textarea name="Message" placeholder="Message" required=""></textarea>
+						<textarea name="Message" placeholder="Message" required="" id="submit-form-Message"></textarea>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -747,6 +747,49 @@
 		<!-- Smooth-Scrolling-JavaScript -->
 
 	<!-- Custom-JavaScript-File-Links -->
+
+	<!-- form validation code -->
+	<script>
+		document.getElementById("submit-form").addEventListener("submit", function(event) {
+			event.preventDefault(); // Prevent form submission initially
+		  
+			var name = document.getElementById("submit-form-Name").value.trim();
+			var email = document.getElementById("submit-form-Email").value.trim();
+			var phoneNumber = document.getElementById("submit-form-PhoneNumber").value.trim();
+		  
+			var isValid = true;
+			var errorMessage = "";
+		  
+			// Name validation
+			if (name === "") {
+			  errorMessage += "Please enter your name.\n";
+			  isValid = false;
+			}
+		  
+			// Email validation
+			var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(email)) {
+			  errorMessage += "Please enter a valid email address.\n";
+			  isValid = false;
+			}
+		  
+			// Phone number validation (adjust the regex as needed)
+			var phoneRegex = /^\d{10}$/; // Example for 10-digit phone numbers
+			if (!phoneRegex.test(phoneNumber)) {
+			  errorMessage += "Please enter a valid phone number.\n";
+			  isValid = false;
+			}
+		  
+			if (!isValid) {
+			  alert(errorMessage);
+			} else {
+			  // Form data is valid, submit the form
+			  this.submit();
+			}
+		  });
+		  
+	</script>
+	<!-- form validation code -->
 
 
 	<!-- form Submit Notification Ajax script -->
