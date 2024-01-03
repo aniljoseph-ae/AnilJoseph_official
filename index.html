@@ -23,19 +23,19 @@
 <meta charset="utf-8">
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
 <meta name="keywords" content="Opulent a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript" defer> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Meta-Tags -->
 
 <!-- Ajax Library for form submission -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async></script>
 <!-- Ajax Library for form submission -->
 
 <!-- Custom-Stylesheet-Links -->
-<!-- Bootstrap-CSS --> 	<link rel="stylesheet" href="css/bootstrap.min.css"		type="text/css" media="all">
-<!-- Index-Page-CSS --> <link rel="stylesheet" href="css/style.css" 			type="text/css" media="all">
-<!-- FontAwesome-CSS --><link rel="stylesheet" href="css/font-awesome.min.css"	type="text/css" media="all">
-<!-- PopUp-Box-CSS -->	<link rel="stylesheet" href="css/chocolat.css"			type="text/css" media="all">
-<!-- OwlCarousel-CSS --><link rel="stylesheet" href="css/owl.carousel.css"		type="text/css" media="all">
+<!-- Bootstrap-CSS --> 	<link rel="stylesheet" href="css/bootstrap.min.css"		type="text/css" media="all" onload="this.media='all'">
+<!-- Index-Page-CSS --> <link rel="stylesheet" href="css/style.css" 			type="text/css" media="all" rel="preload">
+<!-- FontAwesome-CSS --><link rel="stylesheet" href="css/font-awesome.min.css"	type="text/css" media="print" onload="this.media='all'">
+<!-- PopUp-Box-CSS -->	<link rel="stylesheet" href="css/chocolat.css"			type="text/css" media="all" onload="this.media='all'">
+<!-- OwlCarousel-CSS --><link rel="stylesheet" href="css/owl.carousel.css"		type="text/css" media="all"onload="this.media='all'">
 <!-- //Custom-Stylesheet-Links -->
 
 <!-- Fonts -->
@@ -813,6 +813,19 @@
     </script>
 
 	<!-- form Submit Notification Ajax script -->
+
+	<!-- load CSS synchronously -->
+	<script>
+		function loadCSS(href) {
+			const link = document.createElement("css/style.css");
+			link.href = href;
+			link.rel = "stylesheet";
+			link.onload = () => {
+			  // Handle any post-loading tasks
+			};
+			document.head.appendChild(link);}loadCSS("css/style.css");
+	</script>
+	<!-- load CSS synchronously -->
 
 </body>
 <!-- Body -->
