@@ -178,7 +178,7 @@ a:focus, a:hover {
 	border-radius: 50%;
 	background-position: center center;
 	-webkit-backface-visibility: hidden;
-	/* problem: "Also define the standard property 'backface-visibility' for compatibilitycss(vendorPrefix)" */
+	/* problem: "Also define the standard property 'backface-visibility' for compatibility's(vendorPrefix)" */
 	/* source: -webkit-backface-visibility: hidden;  */
 	backface-visibility: hidden;
 	/* solution */
@@ -453,6 +453,15 @@ a:focus, a:hover {
 		font-size: 15px;
 		padding: 0 5px;
 	}
+
+	/* id : horizontalTab: remove inline css and copied here */
+	#horizontalTab{
+		display: block;
+		width: 100%;
+		margin: 0px;
+	}
+
+	/* id : horizontalTab: remove inline css and copied here */
 
 	/*-- //Tabs --*/
 
@@ -1618,7 +1627,7 @@ form.contact_form {
 		width: 20.5%;
 	}
 	.work-grid {
-		height: 300px;
+		height: 245px;
 	}
 	.work-info h4 {
 		padding: 11px 30px 10px;
@@ -1921,7 +1930,7 @@ form.contact_form {
 		width: 38%;
 	}
 	.work-grid {
-		height: 370px;
+		height: 300px;
 	}
 	.portfolio figcaption h3 {
 		margin-top: 70px;
@@ -2031,7 +2040,7 @@ form.contact_form {
 	.work-info h4 {
 		padding: 10px 25px;
 		font-size: 14px;
-		margin-left: 80px;
+		margin-left: 44px;
 	}
 	.work-info p {
 		text-align: left;
@@ -2059,10 +2068,10 @@ form.contact_form {
 	}
 	.work-info .work-left2 h5 {
 		top: -51px;
-		right: 49%;
+		right: 57%;
 	}
 	.work-left2 {
-		height: 100px;
+		height: 130px;
 	}
 	.work-right.work-right2 {
 		min-height: 50px;
@@ -2080,7 +2089,7 @@ form.contact_form {
 		right: 18%;
 	}
 	.work-info h5.sch {
-		right: 25%;
+		right: 15%;
 	}
 	#loadMore, #showLess {
 		padding: 7px 0;
@@ -2170,7 +2179,7 @@ form.contact_form {
 		right: 12%;
 	}
 	.work-left2 {
-		height: 125px;
+		height: 130px;
 	}
 	.work-info .work-right2 h4 {
 		margin-left: 200px;
@@ -2182,7 +2191,7 @@ form.contact_form {
 		right: 14%;
 	}
 	.work-info h5.sch {
-		right: 22%;
+		right: 12%;
 	}
 	#loadMore, #showLess {
 		width: 35%;
@@ -2196,6 +2205,11 @@ form.contact_form {
 	.copyright p {
 		font-size: 14px;
 	}
+	/* add margin for company 3 for mobile devises below 480 */
+	.work-left{
+		margin-top: 0px;
+	}
+	/* add margin for company 3 for mobile devises below 480 */
 }
 
 @media screen and (max-width: 384px) {
@@ -2236,7 +2250,7 @@ form.contact_form {
 		right: 11%;
 	}
 	.work-info h5.sch {
-		right: 19%;
+		right: 10%;
 	}
 }
 
@@ -2287,7 +2301,7 @@ form.contact_form {
 		width: 43%;
 	}
 	.work-right {
-		height: 250px;
+		height: 230px;
 	}
 	.work-info h4 {
 		margin-left: 15px;
@@ -2308,10 +2322,10 @@ form.contact_form {
 		right: 5%;
 	}
 	.work-info h5.univ {
-		right: 9%;
+		right: 2%;
 	}
 	.work-info h5.sch {
-		right: 18%;
+		right: 3%;
 	}
 }
 
@@ -2404,7 +2418,7 @@ form.contact_form {
 		top: -36px;
 	}
 	.work-info .work-right2 h4 {
-		margin-left: 150px;
+		margin-left: 130px;
 	}
 	.work-right.work-right2 h4:before {
 		left: -13px;
@@ -2422,7 +2436,7 @@ form.contact_form {
 		top: -36px;
 	}
 	.work-left2 {
-		height: 150px;
+		height: 180px;
 	}
 	#loadMore, #showLess {
 		width: 44%;
